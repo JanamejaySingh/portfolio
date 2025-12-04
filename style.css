@@ -1,0 +1,350 @@
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+   THEME VARIABLES
+-------------------------------------------------- */
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+/* PAGE TRANSITION */
+.page-transition {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: pageFade 0.6s ease-out forwards;
+}
+
+@keyframes pageFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(20, 20, 20, 0.8);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+.navbar a {
+    color: #bbbbbb;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    min-height: 90vh;
+    gap: 60px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #bbbbbb;
+}
+
+.hero-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 3px solid #7f5cff;
+}
+
+/* ANIMATIONS */
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.fade-slide-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeRight 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* NAME + LOGO COLOR ANIMATION */
+@keyframes softGamingRGB {
+    0% { color: #89b4fa; }
+    15% { color: #b4befe; }
+    30% { color: #cba6f7; }
+    45% { color: #f5c2e7; }
+    60% { color: #94e2d5; }
+    75% { color: #a6e3a1; }
+    90% { color: #f9e2af; }
+    100% { color: #89b4fa; }
+}
+
+@keyframes softAura {
+    0%, 100% { text-shadow: 0 0 4px currentColor; }
+    50% { text-shadow: 0 0 10px currentColor; }
+}
+
+.logo, .hero-name {
+    animation: softGamingRGB 10s ease-in-out infinite,
+               softAura 3s ease-in-out infinite;
+}
+
+/* --------------------------------------------------
+   SKILLS PAGE
+-------------------------------------------------- */
+.skills-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: skillsPageFade 0.8s ease-out forwards;
+}
+
+@keyframes skillsPageFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.35s ease,
+                box-shadow 0.45s ease,
+                border-color 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+
+    opacity: 0;
+    transform: translateY(15px);
+    animation: cardFade 0.8s ease-out forwards;
+}
+
+@keyframes cardFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARD STAGGER */
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover */
+.skill-card:hover {
+    transform: translateY(-6px) scale(1.03) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 0 18px rgba(137,180,250,0.35);
+    border-color: rgba(180,190,254,0.4);
+}
+
+.skill-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #b4befe;
+}
+
+.skill-list li {
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+/* Skills Banner */
+.skills-banner {
+    width: 100%;
+    height: 230px;
+    background: url("images/banner.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: -70px;
+}
+
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: rgba(22,21,21,0.9);
+    padding: 10px 30px;
+    border-radius: 12px;
+    animation: softGamingRGB 10s infinite,
+               softAura 3s infinite;
+}
+
+/* --------------------------------------------------
+   CONTACT PAGE
+-------------------------------------------------- */
+.contact-input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    color: white;
+    margin-top: 6px;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-input:focus {
+    outline: none;
+    border: 1px solid #b4befe;
+    box-shadow: 0 0 10px rgba(180,190,254,0.4);
+}
+
+.contact-btn {
+    background: #1a1a1a;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    background: #272727;
+}
+
+/* Contact bar */
+.contact-line-bar {
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.contact-line-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.contact-line-item:hover {
+    opacity: 1;
+}
+
+.contact-line-icon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-line-item:hover .contact-line-icon {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.contact-line-item span,
+.contact-line-item a {
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------
+   MOBILE RESPONSIVE (MOVED TO responsive.css)
+-------------------------------------------------- */
+/* --------------------------------------------------
+   GLOBAL FOOTER
+-------------------------------------------------- */
+
+.global-footer {
+    width: 100%;
+    padding: 25px 0;
+    margin-top: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(4px);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-text {
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.footer-icon {
+    width: 26px;
+    height: 26px;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+

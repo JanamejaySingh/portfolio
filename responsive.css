@@ -1,0 +1,153 @@
+/* --------------------------------------------------
+   MOBILE RESPONSIVE — (max-width: 768px)
+-------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* ---------------- NAVBAR ---------------- */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(20, 20, 20, 0.95);
+        padding: 15px 20px;
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* ---------------- HERO SECTION ---------------- */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-photo img {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* ---------------- SKILLS PAGE ---------------- */
+
+    .skills-banner {
+        height: 170px;
+        margin-top: -40px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+        padding: 8px 20px;
+    }
+
+    /* Make all skill cards equal size */
+    .skill-card {
+        min-height: 200px;
+        min-width: 260px;
+        max-width: 320px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Skills grid stacked */
+    .skills-section .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ---------------- CONTACT PAGE ---------------- */
+
+    /* Inputs spacing and width */
+    .contact-input {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .contact-btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    /* Contact line bar responsive layout */
+    .contact-line-bar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-line-item {
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .contact-line-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .contact-line-item span,
+    .contact-line-item a {
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 40px !important;
+    }
+
+    /* ---------------- PROJECTS PAGE ---------------- */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .project-card {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+
+/* FOOTER – MOBILE */
+.global-footer {
+    padding: 20px 0;
+}
+
+.footer-icons {
+    gap: 14px;
+}
+
+.footer-icon {
+    width: 22px;
+    height: 22px;
+}
+

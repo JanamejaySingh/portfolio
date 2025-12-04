@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Janamejay</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body class="page-transition bg-[#0d0f16] text-white">
+
+<header class="navbar">
+    <div class="logo">J A N A M E J A Y</div>
+
+    <!-- Hamburger Icon (mobile) -->
+    <button class="hamburger" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <!-- Desktop + Mobile Menu -->
+    <nav id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="pt-32 px-10">
+
+    <div class="skills-banner">
+        <div class="banner-overlay">
+            <h2 class="banner-title">Projects</h2>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-8">
+
+        <div class="skill-card project-card">
+            <h3 class="skill-title">Portfolio Website</h3>
+            <p class="opacity-80 text-sm mt-2">
+                A fully designed personal portfolio with animations, dark theme and multiple pages.
+            </p>
+        </div>
+
+        <div class="skill-card project-card">
+            <h3 class="skill-title">CRUD Web App</h3>
+            <p class="opacity-80 text-sm mt-2">
+                A basic CRUD application using Spring Boot + MySQL.
+            </p>
+        </div>
+
+        <div class="skill-card project-card">
+            <h3 class="skill-title">Node.js API Project</h3>
+            <p class="opacity-80 text-sm mt-2">
+                REST API built with Node.js and Express with full routing.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="global-footer">
+    <div class="footer-content">
+
+        <p class="footer-text">© 2025 Janamejay — All Rights Reserved.</p>
+
+        <div class="footer-icons">
+
+            <a href="#" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram" class="footer-icon">
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn" class="footer-icon">
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="images/whatsapp.svg" alt="WhatsApp" class="footer-icon">
+            </a>
+
+            <a href="mailto:janamejay@gmail.com">
+                <img src="images/email.svg" alt="Email" class="footer-icon">
+            </a>
+
+        </div>
+
+    </div>
+</footer>
+
+
+</body>
+</html>
