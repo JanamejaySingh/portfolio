@@ -40,24 +40,25 @@
     </h2>
 
     <!-- CONTACT FORM -->
-    <form class="mt-10 flex flex-col gap-6">
-        <div>
-            <label class="text-sm opacity-80">Full Name</label>
-            <input type="text" class="contact-input">
-        </div>
+    <form name="contact" method="POST" data-netlify="true" class="mt-10 flex flex-col gap-6">
 
-        <div>
-            <label class="text-sm opacity-80">Email</label>
-            <input type="email" class="contact-input">
-        </div>
+    <div>
+        <label class="text-sm opacity-80">Full Name</label>
+        <input type="text" name="name" class="contact-input" required>
+    </div>
 
-        <div>
-            <label class="text-sm opacity-80">Your Message</label>
-            <textarea rows="5" class="contact-input"></textarea>
-        </div>
+    <div>
+        <label class="text-sm opacity-80">Email</label>
+        <input type="email" name="email" class="contact-input" required>
+    </div>
 
-        <button class="contact-btn">Send Message</button>
-    </form>
+    <div>
+        <label class="text-sm opacity-80">Your Message</label>
+        <textarea rows="5" name="message" class="contact-input" required></textarea>
+    </div>
+
+    <button class="contact-btn">Send Message</button>
+</form>
 
 </section>
 
